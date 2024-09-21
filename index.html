@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Shopping list</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="titel">Shopping list</h1>
+        <br>
+        <h2 class="subTitel">Beta V1.0</h2>
+    </header>
+
+    <main>
+        <div id="shoppingItem"></div>
+
+        <button class="addMoreBtn" id="addMoreBtn" type="button">+ Lägg till mer +</button>
+
+        <dialog id="dialogAdd">
+            <h1>Lägg till produkt</h1>
+            <label for="dialogAddTitelInput">Produktnamn</label>
+            <br>
+            <input type="text" id="dialogAddTitelInput" value="Produktnamn">
+            <br>
+            <br>
+            <label for="dialogAddDiscriptionInput">Produktbeskrivning</label>
+            <br>
+            <input type="text" id="dialogAddDiscriptionInput">
+            <br>
+            <br>
+            <label for="dialogAddStackInput">Hur många</label>
+            <br>
+            <button>-</button>
+            <input type="number" id="dialogAddStackInput" max="999" min="1">
+            <button>+</button>
+            <br>
+            <br>
+            <button onclick=" dialogAdd.close();">Stäng</button>  
+            <button id="dialogAddSubmitButton">Save</button>  
+        </dialog>
+
+        <dialog id="dialogEdit">
+            <h1>Redigera produkt</h1>
+            <label for="dialogEditTitelInput">Produktnamn</label>
+            <br>
+            <input type="text" id="dialogEditTitelInput">
+            <br>
+            <br>
+            <label for="dialogEditDiscriptionInput">Produktbeskrivning</label>
+            <br>
+            <input type="text" id="dialogEditDiscriptionInput">
+            <br>
+            <br>
+            <label for="dialogEditStackInput">Hur många</label>
+            <br>
+            <button>-</button>
+            <input type="number" id="dialogEditStackInput" max="999" min="1">
+            <button>+</button>
+            <br>
+            <br>
+            <button onclick=" dialogEdit.close();">Stäng</button>  
+            <button id="dialogEditTSubmitButton">Save</button>  
+            <button id="deleteButton">Ta bort</button>  
+        </dialog>
+
+        <noscript>
+            <div class="alert">You must have <strong>javascript enable</strong> for this page to work correctly</div>
+        </noscript>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
