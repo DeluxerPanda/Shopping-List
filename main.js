@@ -176,5 +176,41 @@ window.onload = function () {
     createInfiniteBoxes();
 }
 
-// Add event listener to "Add More" button
+
 document.getElementById('addMoreBtn').addEventListener('click', addNewItem);
+
+let valueAdd;
+
+document.getElementById("dialogButtonIncressStack").onclick = function() {
+  valueAdd = document.getElementById("dialogAddStackInput").value
+  if (valueAdd >= 1 && valueAdd <= 998) {
+  valueAdd++;
+  document.getElementById("dialogAddStackInput").value = valueAdd;
+}
+}
+
+document.getElementById("dialogButtonDecressStack").onclick = function() {
+  valueAdd =  document.getElementById("dialogAddStackInput").value
+  if (valueAdd >= 2 && valueAdd <= 999) {
+  valueAdd--;
+  document.getElementById("dialogAddStackInput").value = valueAdd; 
+}
+}
+
+let valueEdit;
+
+document.getElementById("dialogButtonIncressEditStack").onclick = function() {
+  valueEdit =  document.getElementById("dialogEditStackInput").value
+  if (valueEdit >= 1 && valueEdit <= 998) {
+  valueEdit++;
+  document.getElementById("dialogEditStackInput").value = valueEdit;
+}
+}
+
+document.getElementById("dialogButtonDecressEditStack").onclick = function() {
+  valueEdit =  document.getElementById("dialogEditStackInput").value
+  if (valueEdit >= 2 && valueEdit <= 999) {
+  valueEdit--;
+  document.getElementById("dialogEditStackInput").value = valueEdit; 
+}
+}

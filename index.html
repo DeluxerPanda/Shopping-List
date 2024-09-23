@@ -13,10 +13,11 @@
     <header>
         <h1 class="titel">Shopping list</h1>
         <br>
-        <h2 class="subTitel">Beta V1.0</h2>
+        <h2 class="subTitel">Beta V1.1</h2>
     </header>
 
     <main>
+        <button class="sheareList">Dela länk</button>
         <div id="shoppingItem"></div>
 
         <button class="addMoreBtn" id="addMoreBtn" type="button">+ Lägg till mer +</button>
@@ -33,15 +34,17 @@
             <input type="text" id="dialogAddDiscriptionInput">
             <br>
             <br>
-            <label for="dialogAddStackInput">Hur många</label>
+            <label for="dialogAddStackInput">Hur många?</label>
             <br>
-            <button>-</button>
-            <input type="number" id="dialogAddStackInput" max="999" min="1">
-            <button>+</button>
+            <div class="itemStackCard">
+            <button class="itemStackDecrease" id="dialogButtonDecressStack">-</button>
+            <input type="number" class="countStack-input" id="dialogAddStackInput" max="998" min="1">
+            <button class="itemStackIncrease" id="dialogButtonIncressStack">+</button>
+            </div>
             <br>
             <br>
-            <button onclick=" dialogAdd.close();">Stäng</button>  
             <button id="dialogAddSubmitButton">Save</button>  
+            <button class="dialogCloseTSubmitButton" onclick=" dialogAdd.close();">Stäng</button>  
         </dialog>
 
         <dialog id="dialogEdit">
@@ -56,15 +59,17 @@
             <input type="text" id="dialogEditDiscriptionInput">
             <br>
             <br>
-            <label for="dialogEditStackInput">Hur många</label>
+            <label for="dialogEditStackInput">Hur många?</label>
             <br>
-            <button>-</button>
-            <input type="number" id="dialogEditStackInput" max="999" min="1">
-            <button>+</button>
+            <div class="itemStackCard">
+            <button class="itemStackDecrease" id="dialogButtonDecressEditStack">-</button>
+            <input type="number" class="countStack-input" id="dialogEditStackInput" max="998" min="1">
+            <button class="itemStackIncrease" id="dialogButtonIncressEditStack">+</button>
+            </div>
             <br>
             <br>
-            <button onclick=" dialogEdit.close();">Stäng</button>  
             <button id="dialogEditTSubmitButton">Save</button>  
+            <button class="dialogCloseTSubmitButton" onclick=" dialogEdit.close();">Stäng</button>  
             <button id="deleteButton">Ta bort</button>  
         </dialog>
 
