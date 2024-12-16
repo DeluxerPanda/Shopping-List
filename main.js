@@ -67,7 +67,7 @@ function addNewItem() {
   const params = getUrlParams();
 
   const dialogTitel = document.getElementById('dialogAddTitelInput');
-  dialogTitel.value = "Produktnamn";
+  dialogTitel.value = "";
 
   const dialogDiscription = document.getElementById('dialogAddDiscriptionInput');
   dialogDiscription.value = "";
