@@ -38,11 +38,11 @@ function generateItemBox(id, title, description, stack = 1) {
                 <div class="itemCheckContaineer">
                     <input type="checkbox" class="itemCheck">
                 </div>
+                
             </div>
         </div>
     `;
 }
-
 // Function to create infinite boxes with dynamic titles and descriptions
 function createInfiniteBoxes() {
   const shoppingItemContainer = document.getElementById('shoppingItem');

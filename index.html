@@ -11,19 +11,24 @@
 
 <body>
     <header>
-        <h1 class="titel">Shopping list</h1>
-        <br>
-        <h2 class="subTitel">Beta V1.2</h2>
+            <!-- <h1 class="titel-Price">1234.56 KR</h1> -->
+        <div>
+            <h1 class="titel">Shopping list</h1>
+        </div>
+        <!-- <button class="sheareList">Dela länk</button> -->
     </header>
 
     <main>
-        <!-- <button class="sheareList">Dela länk</button> NOT done -->
         <div id="shoppingItem"></div>
 
         <button class="addMoreBtn" id="addMoreBtn" type="button">+ Lägg till mer +</button>
 
         <dialog id="dialogAdd">
             <h1>Lägg till produkt</h1>
+            <label for="dialogAddTitelInput">Lägg till bild</label>
+            <!-- <div class="itemImgContainer">
+                <img class="itemImg" src="no_img_found.png" alt="Shopping item Image">
+            </div> -->
             <label for="dialogAddTitelInput">Produktnamn</label>
             <br>
             <input type="text" id="dialogAddTitelInput">
@@ -49,6 +54,11 @@
 
         <dialog id="dialogEdit">
             <h1>Redigera produkt</h1>
+            <!-- <label for="dialogAddTitelInput">Redigera bild</label>
+            <div class="itemImgContainer">
+                <img class="itemImg" src="no_img_found.png" alt="Shopping item Image">
+                <input type="file" name="filename" accept="image/jpg, image/jpeg, image/png">
+            </div> -->
             <label for="dialogEditTitelInput">Produktnamn</label>
             <br>
             <input type="text" id="dialogEditTitelInput">
@@ -79,7 +89,7 @@
     </main>
 
     <footer>
-
+        <h2 class="subTitel">Beta V1.3</h2>
     </footer>
     <script src="main.js"></script>
 </body>
