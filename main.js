@@ -10,7 +10,7 @@ function getUrlParams() {
 function getMaxIndexFromParams(params) {
   let maxIndex = 0;
   params.forEach((value, key) => {
-    const match = key.match(/itemTextTitel(\d+)/);
+    const match = key.match(/T(\d+)/);
     if (match) {
       const currentIndex = parseInt(match[1], 10);
       if (currentIndex > maxIndex) {
@@ -50,10 +50,10 @@ function createInfiniteBoxes() {
   index = getMaxIndexFromParams(params) + 1;
 
   for (let i = 0; i < index; i++) {
-    if (params.has(`itemTextTitel${i}`) && params.has(`itemTextDiscription${i}`)) {
-      const title = params.get(`itemTextTitel${i}`);
-      const description = params.get(`itemTextDiscription${i}`);
-      const stack = params.get(`itemStack${i}`) || 1;
+    if (params.has(`T${i}`) && params.has(`D${i}`)) {
+      const title = params.get(`T${i}`);
+      const description = params.get(`D${i}`);
+      const stack = params.get(`S${i}`) || 1;
       const newBoxHTML = generateItemBox(i, title, description, stack);
       shoppingItemContainer.insertAdjacentHTML('beforeend', newBoxHTML);
     }
@@ -83,9 +83,9 @@ function addNewItem() {
     const newTitle = document.getElementById('dialogAddTitelInput').value;
     const newDescription = document.getElementById('dialogAddDiscriptionInput').value;
     const stack = document.getElementById('dialogAddStackInput').value;
-      params.append(`itemTextTitel${index}`, newTitle);
-      params.append(`itemTextDiscription${index}`, newDescription);
-      params.append(`itemStack${index}`, stack);
+      params.append(`T${index}`, newTitle);
+      params.append(`D${index}`, newDescription);
+      params.append(`S${index}`, stack);
 
       const newUrl = window.location.pathname + '?' + params.toString();
       window.history.pushState({ path: newUrl }, '', newUrl);
@@ -99,9 +99,9 @@ function addNewItem() {
 
 function editItem(id) {
   const params = getUrlParams();
-  const titleKey = `itemTextTitel${id}`;
-  const descriptionKey = `itemTextDiscription${id}`;
-  const stackKey = `itemStack${id}`;
+  const titleKey = `T${id}`;
+  const descriptionKey = `D${id}`;
+  const stackKey = `S${id}`;
 
   const currentTitle = params.get(titleKey);
   const currentDescription = params.get(descriptionKey);
@@ -152,9 +152,9 @@ function editItem(id) {
 }
 function removeItem(id) {
   const params = getUrlParams();
-  const titleKey = `itemTextTitel${id}`;
-  const descriptionKey = `itemTextDiscription${id}`;
-  const stackKey = `itemStack${id}`;
+  const titleKey = `T${id}`;
+  const descriptionKey = `D${id}`;
+  const stackKey = `S${id}`;
 
   // Remove the item from URL parameters
   params.delete(titleKey);
