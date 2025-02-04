@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Shopping list</title>
+</head>
+
+<body>
+    <header>
+            <!-- <h1 class="titel-Price">1234.56 KR</h1> -->
+        <div>
+            <h1 class="titel">Shopping list</h1>
+            <h2 class="subTitel">Beta V1.3</h2>
+            <br>
+            <div>
+            <a  class="DEPRECATE" href="/index.html">Denna lista använder en gammal version</a>
+            <br>
+            <br>
+            <a class="DEPRECATE" href="/index.html">Gå till den nya versionen här!</a>
+        </div>
+        </div>
+        <!-- <button class="sheareList">Dela länk</button> -->
+    </header>
+
+    <main>
+        <div id="shoppingItem"></div>
+
+        <!-- <button class="addMoreBtn" id="addMoreBtn" type="button">+ Lägg till mer +</button> -->
+
+        <dialog id="dialogAdd">
+            <h1>Lägg till produkt</h1>
+             <!-- <label for="dialogAddTitelInput">Lägg till bild</label>
+           <div class="itemImgContainer">
+                <img class="itemImg" src="no_img_found.png" alt="Shopping item Image">
+            </div> -->
+            <label for="dialogAddTitelInput">Produktnamn</label>
+            <br>
+            <input type="text" id="dialogAddTitelInput">
+            <br>
+            <br>
+            <label for="dialogAddDiscriptionInput">Produktbeskrivning</label>
+            <br>
+            <input type="text" id="dialogAddDiscriptionInput">
+            <br>
+            <br>
+            <label for="dialogAddStackInput">Hur många?</label>
+            <br>
+            <div class="itemStackCard">
+            <button class="itemStackDecrease" id="dialogButtonDecressStack">-</button>
+            <input type="number" class="countStack-input" id="dialogAddStackInput" max="998" min="1">
+            <button class="itemStackIncrease" id="dialogButtonIncressStack">+</button>
+            </div>
+            <br>
+            <br>
+            <button id="dialogAddSubmitButton">Spara</button>  
+            <button class="dialogCloseTSubmitButton" onclick=" dialogAdd.close();">Stäng</button>  
+        </dialog>
+
+        <dialog id="dialogEdit">
+            <h1>Redigera produkt</h1>
+            <!-- <label for="dialogAddTitelInput">Redigera bild</label>
+            <div class="itemImgContainer">
+                <img class="itemImg" src="no_img_found.png" alt="Shopping item Image">
+                <input type="file" name="filename" accept="image/jpg, image/jpeg, image/png">
+            </div> -->
+            <label for="dialogEditTitelInput">Produktnamn</label>
+            <br>
+            <input type="text" id="dialogEditTitelInput">
+            <br>
+            <br>
+            <label for="dialogEditDiscriptionInput">Produktbeskrivning</label>
+            <br>
+            <input type="text" id="dialogEditDiscriptionInput">
+            <br>
+            <br>
+            <label for="dialogEditStackInput">Hur många?</label>
+            <br>
+            <div class="itemStackCard">
+            <button class="itemStackDecrease" id="dialogButtonDecressEditStack">-</button>
+            <input type="number" class="countStack-input" id="dialogEditStackInput" max="998" min="1">
+            <button class="itemStackIncrease" id="dialogButtonIncressEditStack">+</button>
+            </div>
+            <br>
+            <br>
+            <button id="dialogEditTSubmitButton">Spara</button>  
+            <button class="dialogCloseTSubmitButton" onclick=" dialogEdit.close();">Stäng</button>  
+            <button id="deleteButton">Ta bort</button>  
+        </dialog>
+
+        <noscript>
+            <div class="alert">You must have <strong>javascript enable</strong> for this page to work correctly</div>
+        </noscript>
+    </main>
+
+    <!-- <footer>
+        <h2 class="subTitel">Beta V1.3</h2>
+    </footer> -->
+    <script src="main.js"></script>
+</body>
+
+</html>
