@@ -17,7 +17,7 @@
             <h2 class="subTitel">Beta V1.3</h2>
             <br>
             <div>
-            <a  class="DEPRECATE" href="/index.html">Denna lista använder en gammal version</a>
+            <a class="DEPRECATE" href="/index.html">vissa funktioner är inaktiverade</a>
             <br>
             <br>
             <a class="DEPRECATE" href="/index.html">Gå till den nya versionen här!</a>
@@ -31,13 +31,13 @@
 
         <!-- <button class="addMoreBtn" id="addMoreBtn" type="button">+ Lägg till mer +</button> -->
 
-        <dialog id="dialogAdd">
-            <h1>Lägg till produkt</h1>
+        <!-- <dialog id="dialogAdd">
+            <h1>Lägg till produkt</h1> -->
              <!-- <label for="dialogAddTitelInput">Lägg till bild</label>
            <div class="itemImgContainer">
                 <img class="itemImg" src="no_img_found.png" alt="Shopping item Image">
             </div> -->
-            <label for="dialogAddTitelInput">Produktnamn</label>
+            <!-- <label for="dialogAddTitelInput">Produktnamn</label>
             <br>
             <input type="text" id="dialogAddTitelInput">
             <br>
@@ -58,7 +58,7 @@
             <br>
             <button id="dialogAddSubmitButton">Spara</button>  
             <button class="dialogCloseTSubmitButton" onclick=" dialogAdd.close();">Stäng</button>  
-        </dialog>
+        </dialog> -->
 
         <dialog id="dialogEdit">
             <h1>Redigera produkt</h1>
@@ -69,26 +69,26 @@
             </div> -->
             <label for="dialogEditTitelInput">Produktnamn</label>
             <br>
-            <input type="text" id="dialogEditTitelInput">
+            <input type="text" id="dialogEditTitelInput" disabled>
             <br>
             <br>
             <label for="dialogEditDiscriptionInput">Produktbeskrivning</label>
             <br>
-            <input type="text" id="dialogEditDiscriptionInput">
+            <input type="text" id="dialogEditDiscriptionInput" disabled>
             <br>
             <br>
             <label for="dialogEditStackInput">Hur många?</label>
             <br>
             <div class="itemStackCard">
-            <button class="itemStackDecrease" id="dialogButtonDecressEditStack">-</button>
-            <input type="number" class="countStack-input" id="dialogEditStackInput" max="998" min="1">
-            <button class="itemStackIncrease" id="dialogButtonIncressEditStack">+</button>
+            <!-- <button class="itemStackDecrease" id="dialogButtonDecressEditStack">-</button> -->
+            <input type="number" class="countStack-input" id="dialogEditStackInput" max="998" min="1" disabled>
+            <!-- <button class="itemStackIncrease" id="dialogButtonIncressEditStack">+</button> -->
             </div>
             <br>
             <br>
-            <button id="dialogEditTSubmitButton">Spara</button>  
+            <!-- <button id="dialogEditTSubmitButton">Spara</button>   -->
             <button class="dialogCloseTSubmitButton" onclick=" dialogEdit.close();">Stäng</button>  
-            <button id="deleteButton">Ta bort</button>  
+            <!-- <button id="deleteButton">Ta bort</button>   -->
         </dialog>
 
         <noscript>

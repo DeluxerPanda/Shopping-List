@@ -273,6 +273,8 @@ dialog{
 input[type=text]{
   margin: 5px;
   border-radius: 25px;
+  background-color: white;
+  color: black;
 }
 
 .sheareList{
